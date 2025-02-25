@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Befree</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script>
+        function performSearch(event) {
+          event.preventDefault();
+          const query = document.querySelector(".search-input").value;
+          window.location.href = `search.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <form onsubmit="performSearch(event)">
+                <input class="search-input" type="text" placeholder="Найти...">
+                <button type="submit">Поиск</button>
+              </form>
+        </div>
+        <a href="index.html">
+            <img src="../pictures/befree_logo.png" alt="Befree Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p>Инклюзивность, свобода самовыражения, красота и уникальность каждого — вот ценности, которые нам близки.</p>
+    </section>
+    <section class="community-section">
+        <div class="community-images">
+            <img src="../pictures/community_1.jpg" alt="Image 1">
+            <img src="../pictures/community_2.jpg" alt="Image 2">
+            <img src="../pictures/community_3.jpg" alt="Image 3">
+            <div class="community-text">
+                <h1>#BEFREECOMMUNITY</h1>
+                <p>
+                    Мы создаем комьюнити из прогрессивных и творческих людей. 
+                    Из тех, кто смотрит в будущее и смело меняет мир, себя и окружающих.
+                </p>
+                <p>Присоединяйтесь!</p>
+            </div>
+            <img src="../pictures/community_4.jpg" alt="Image 4">
+        </div>
+    </section>
+
+    <footer>
+        <p>2024 Befree. Все права защищены.</p>
+        <a href="feedback.html" class="feedback-link"><p>Обратная связь</p></a>
+    </footer>
+</body>
+</html>

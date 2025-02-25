@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты поиска</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          color: #333;
+          margin: 0;
+          padding: 0;
+        }
+        .result-container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      </style>
+    <script>
+        function getQueryParameter(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <form onsubmit="performSearch(event)">
+                <input class="search-input" type="text" placeholder="Найти...">
+                <button type="submit">Поиск</button>
+              </form>
+
+        </div>
+        <a href="index.html">
+            <img src="../pictures/befree_logo.png" alt="Befree Logo" class="logo">
+        </a>
+        <nav>
+          <ul>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="login.html">Вход</a></li>
+              <li><a href="register.html">Регистрация</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+
+        <img class="contact-img" src="../pictures/search_bg.jpg">
+
+        <section>
+            <div class="result-container">
+              <h1>Результаты поиска</h1>
+              <p>Поиск по: <span id="search-query"></span></p>
+            </div>
+            <script>
+              document.getElementById("search-query").textContent =
+                getQueryParameter("search");
+            </script>
+          </section>
+    </main>
+
+    <footer>
+        <p>2024 Befree. Все права защищены.</p>
+        <a href="feedback.html" class="feedback-link"><p>Обратная связь</p></a>
+    </footer>
+    </body>
+    </html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О бренде</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script>
+        function performSearch(event) {
+          event.preventDefault();
+          const query = document.querySelector(".search-input").value;
+          window.location.href = `search.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <form onsubmit="performSearch(event)">
+                <input class="search-input" type="text" placeholder="Найти...">
+                <button type="submit">Поиск</button>
+              </form>
+
+        </div>
+        <a href="index.html">
+            <img src="../pictures/befree_logo.png" alt="Befree Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- О Бренде -->
+    <section class="about">
+        <div class="about-columns">
+            <div class="column">
+                <h2>О БРЕНДЕ</h2>
+            </div>
+            <div class="column">
+                <p>Befree — бренд для всех, кто любит молодежную моду, независимо от возраста. Инклюзивность, свобода самовыражения, красота и уникальность каждого — вот ценности, которые нам близки.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="co-create-section">
+        <div class="left-half">
+            <h1>Befree CO:CREATE</h1>
+            <p>Коммьюнити Befree — это люди разного возраста и типа внешности, с разным опытом и жизненной позицией. Мы хотим создавать моду в России вместе с вами.</p>
+        </div>
+        <div class="right-half">
+            <p>В 2021 году мы запустили проект Befree Co:Create, чтобы разрабатывать коллекции с современными художниками, инфлюенсерами, благотворительными организациями и партнерами бренда, близкими по духу. Каждый месяц мы выпускаем минимум одну коллекцию в сотрудничестве с нашим коммьюнити — и это не просто футболки с принтами, а еще и аксессуары и верхняя одежда.</p>
+            <h2>BEFREE CO:CREATE СОЗДАВАЙ ВМЕСТЕ С НАМИ!</h2>
+        </div>
+    </section>
+
+    <section class="brand-stats">
+        <div class="stats-grid">
+            <!-- Первый ряд с текстом -->
+            <div class="stat-item">
+                <h3>268</h3>
+                <p>магазинов</p>
+            </div>
+            <div class="stat-item">
+                <h3>5</h3>
+                <p>маркетплейсов</p>
+            </div>
+            <div class="image-item">
+                <img src="../pictures/table1.jpg" alt="Модель 1">
+            </div>
+            <div class="image-item">
+                <img src="../pictures/table2.jpg" alt="Модель 2">
+            </div>
+            
+            <!-- Второй ряд с картинками -->
+            <div class="image-item">
+                <img src="../pictures/table3.jpg" alt="Модель 3">
+            </div>
+            <div class="image-item">
+                <img src="../pictures/table4.jpg" alt="Модель 4">
+            </div>
+            <div class="stat-item">
+                <h3>83</h3>
+                <p>города</p>
+            </div>
+            <div class="stat-item">
+                <h3>2002</h3>
+                <p>год основания</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="green-section">
+        <h1>СОЗДАВАЙ ЛУЧШЕЕ БУДУЩЕЕ</h1>
+        <div class="image-text-wrapper">
+            <div class="image-item-green">
+                <img src="../pictures/better_future_1.png" alt="Описание картинки 1">
+                <div class="caption">
+                    <h2>Меньше пакетов</h2>
+                    <p>Ваша покупка упакована в тот же пакет, в котором она пришла с фабрики.
+                         Это минус 8 миллионов пластиковых пакетов в год!</p>
+                </div>
+            </div>
+            <div class="image-item-green">
+                <img src="../pictures/better_future_2.jpg" alt="Описание картинки 2">
+                <div class="caption">
+                    <h2>Новая жизнь старой одежды</h2>
+                    <p>Мы установили recycle-боксы в наших магазинах: теперь вы можете сдать ненужную одежду и внести свой вклад в заботу 
+                        о планете. Вещи не окажутся на свалке — перед запуском проекта мы проверили репутацию компании Laut Recycling</p>
+                </div>
+            </div>
+            <div class="image-item-green">
+                <img src="../pictures/better_future_3.jpg" alt="Описание картинки 3">
+                <div class="caption">
+                    <h2>Ответственное производство</h2>
+                    <p>Обрабатываем деним лазером, чтобы сократить количество химикатов и воды. Используем переработанные полиэстер и шерсть 
+                        с с сертификатом Responsible Wool Standard, который получают гуманные фермеры.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>2024 Befree. Все права защищены.</p>
+        <a href="feedback.html" class="feedback-link">Обратная связь</a>
+    </footer>
+</body>
+</html>

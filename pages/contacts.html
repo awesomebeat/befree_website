@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script>
+        function performSearch(event) {
+          event.preventDefault();
+          const query = document.querySelector(".search-input").value;
+          window.location.href = `search.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <!-- <input type="text" placeholder="Найти...">
+            <button type="submit">Поиск</button> -->
+            <form onsubmit="performSearch(event)">
+                <input class="search-input" type="text" placeholder="Найти...">
+                <button type="submit">Поиск</button>
+              </form>
+        </div>
+        <a href="index.html">
+            <img src="../pictures/befree_logo.png" alt="Befree Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img class="contact-img" src="../pictures/background_contacts.webp">
+
+    <!-- Контакты -->
+    <section class="contacts">
+        <h1 class="contacts-title">Контакты</h1>
+        <div class="contact-columns">
+            <div class="column">
+                <h3>СЛУЖБА ПОДДЕРЖКИ</h3>
+                <p>8 (800) 250-01-02</p>
+                <p>Звонок бесплатный, ежедневно с 7:00 до 24:00 по мск</p>
+                <p>Email: <a href="mailto:info@befree.ru">info@befree.ru</a></p>
+                <p>По вопросам производственного сотрудничества:<br>
+                <a href="mailto:suppliers.befree@melonfashion.com">suppliers.befree@melonfashion.com</a></p>
+                <h3>ОФИС BEFREE</h3>
+                <p>190020, 10-я Красноармейская, 22, литер А, пом. 1-Н, 6-й этаж</p>
+            </div>
+            <div class="column">
+                <h3>РЕКВИЗИТЫ</h3>
+                <p>Акционерное общество «Мэлон Фэшн Груп»</p>
+                <p>Юридический адрес: 190020, г. Санкт-Петербург, 10-я Красноармейская, дом 22, литер А, пом. 1-Н, 6 этаж</p>
+                <p>ИНН 7839326623</p>
+                <p>КПП 783450001</p>
+                <p>ОГРН 1057813298553</p>
+                <p>ОКПО 79723322</p>
+                <p>ОКВЭД 47.71</p>
+                <p>Ф-Л «СЕВЕРНАЯ СТОЛИЦА» АО «РАЙФФАЙЗЕНБАНК». САНКТ-ПЕТЕРБУРГ</p>
+                <p>БИК 044030723</p>
+                <p>К/с 30101810100000000723</p>
+                <p>Р/с 40702810403000421433</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Befree. Все права защищены.</p>
+        <a href="feedback.html" class="feedback-link">Обратная связь</a>
+    </footer>
+</body>
+</html>

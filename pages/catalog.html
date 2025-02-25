@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Befree</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script>
+        function performSearch(event) {
+          event.preventDefault();
+          const query = document.querySelector(".search-input").value;
+          window.location.href = `search.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <form onsubmit="performSearch(event)">
+                <input class="search-input" type="text" placeholder="Найти...">
+                <button type="submit">Поиск</button>
+              </form>
+        </div>
+        <a href="index.html">
+            <img src="../pictures/befree_logo.png" alt="Befree Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="catalog-content">
+
+        <?php include 'db_connect.php'; ?>
+
+        <!-- <div class="product-grid">
+            <a href="product1.html" class="product-card">
+                <img src="../pictures/catalog1.webp" alt="Товар 1">
+                <div class="product-info">
+                    <h3>Жилет белый стеганый</h3>
+                    <p class="price">1999₽</p>
+                    <p>Жилет стеганый утепленный с воротником-стойкой</p>
+                </div>
+            </a>
+    
+            <a href="product2.html" class="product-card">
+                <img src="../pictures/catalog2.webp" alt="Товар 2">
+                <div class="product-info">
+                    <h3>Кардиган красный</h3>
+                    <p class="price">3599₽</p>
+                    <p>Кардиган укороченный вязаный на пуговицах</p>
+                </div>
+            </a>
+    
+            <a href="product3.html" class="product-card">
+                <img src="../pictures/catalog3.webp" alt="Товар 3">
+                <div class="product-info">
+                    <h3>Толстовка флисовая белая</h3>
+                    <p class="price">2299₽</p>
+                    <p>Толстовка half zip флисовая с надписью</p>
+                </div>
+            </a>
+    
+            <a href="product4.html" class="product-card">
+                <img src="../pictures/catalog4.webp" alt="Товар 4">
+                <div class="product-info">
+                    <h3>Брюки-бананы</h3>
+                    <p class="price">3999₽</p>
+                    <p>Брюки-бананы широкие с леопардовым принтом</p>
+                </div>
+            </a>
+    
+            <a href="product5.html" class="product-card">
+                <img src="../pictures/catalog5.webp" alt="Товар 5">
+                <div class="product-info">
+                    <h3>Шуба розовая</h3>
+                    <p class="price">8999₽</p>
+                    <p>Шуба короткая пушистая с длинным ворсом</p>
+                </div>
+            </a>
+    
+            <a href="product6.html" class="product-card">
+                <img src="../pictures/catalog6.webp" alt="Товар 6">
+                <div class="product-info">
+                    <h3>Ботинки на платформе</h3>
+                    <p class="price">6599₽</p>
+                    <p>Ботинки со шнурками на массивной платформе</p>
+                </div>
+            </a>
+    
+            <a href="product7.html" class="product-card">
+                <img src="../pictures/catalog7.webp" alt="Товар 7">
+                <div class="product-info">
+                    <h3>Дубленка замшевая</h3>
+                    <p class="price">6299₽</p>
+                    <p>Дубленка из искусственной замши с отделкой</p>
+                </div>
+            </a>
+    
+            <a href="product8.html" class="product-card">
+                <img src="../pictures/catalog8.webp" alt="Товар 8">
+                <div class="product-info">
+                    <h3>Джинсы на средней посадке</h3>
+                    <p class="price">3599₽</p>
+                    <p>Джинсы baggy fit со средней посадкой</p>
+                </div>
+            </a>
+        </div> -->
+    </main>
+
+    <footer>
+        <p>2024 Befree. Все права защищены.</p>
+        <a href="feedback.html" class="feedback-link"><p>Обратная связь</p></a>
+    </footer>
+</body>
+</html>
